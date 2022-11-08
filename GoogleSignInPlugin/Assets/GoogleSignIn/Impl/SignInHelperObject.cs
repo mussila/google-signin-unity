@@ -1,4 +1,4 @@
-﻿// <copyright file="SignInHelperObject.cs" company="Google Inc.">
+// <copyright file="SignInHelperObject.cs" company="Google Inc.">
 // Copyright (C) 2017 Google Inc. All Rights Reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -23,10 +23,21 @@ namespace Google.Impl {
   ///</remarks>
   public class SignInHelperObject : MonoBehaviour {
 
+    public static SignInHelperObject CreateInstance()
+    {
+      var tmpInstance = Instance;
+      return tmpInstance;
+    }
+
     private static SignInHelperObject instance;
 
     internal static SignInHelperObject Instance {
       get {
+        if (instance)
+        {
+          return instance;
+        }
+
         if (Application.isPlaying) {
           // add an invisible game object to the scene
           GameObject obj = new GameObject("GoogleSignInHelperObject");
