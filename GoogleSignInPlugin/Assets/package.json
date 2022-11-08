@@ -1,0 +1,15 @@
+{
+  "name": "com.google.google-signin-unity",
+  "version": "6.2.4",
+  "displayName": "Google SignIn for Unity",
+  "keywords": [
+    "Google",
+    "GoogleSignIn"
+  ],
+  "author": {
+    "name": "Google LLC",
+    "url": "https://github.com/snorrsi/google-signin-unity/tree/upm1"
+  },
+  "description": "GoogleSignIn for Unity",
+  "unity": "2018.1",
+}
